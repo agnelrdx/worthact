@@ -1,0 +1,1 @@
+var tzdetect={names:moment.tz.names(),matches:function(t){var n=[],e=Date.now(),m=function(t){return[0,4,8,-60,-56,-52,-20,-16].map(function(n){var m=moment(e+30*n*24*60*60*1e3);return t&&m.tz(t),m.format("DDHHmm")}).join(" ")},a=m(t);return tzdetect.names.forEach(function(t){m(t)===a&&n.push(t)}),n}};
